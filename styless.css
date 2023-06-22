@@ -1,0 +1,173 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #f4f5f7;
+}
+.container {
+  width: 500px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+}
+.percent {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+/* Body */
+.body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px;
+}
+.progress {
+  width: 90%;
+  background-color: #e2e4e9;
+  height: 8px;
+  border-radius: 4px;
+}
+.bar {
+  height: 8px;
+  border-radius: 4px;
+  background: #5ba4cf;
+  width: 0%;
+  transition: all 0.5s ease;
+}
+.bg-green {
+  background-color: green;
+}
+
+/* To do list */
+.item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  transition: all .3s ease;
+  border-radius: 4px;
+  padding: 6px;
+}
+.item:hover{
+  background-color: #091e420a;
+}
+.item-description {
+  padding: 5px;
+  margin-right: 20px;
+}
+.item-description.hide{
+  display: none;
+}
+.item-input{
+  margin: 0 5px;
+}
+.item-input.hide{
+  display: none;
+}
+.item-input textarea{
+  width: 100%;
+  padding: 5px 10px;
+}
+.item-completed{
+  cursor: pointer;
+}
+.item-completed:checked + .item-description {
+  text-decoration: line-through;
+}
+.item-delete {
+  position: absolute;
+  right: 6px;
+  opacity: 0.2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: none;
+}
+.item-delete:hover {
+  opacity: 0.6;
+}
+.item:hover .item-delete {
+  display: inline-flex;
+}
+
+/* Add Task Form */
+.form {
+  margin: 8px 6px;
+}
+.add {
+  background-color: #eaecf0;
+}
+.add:hover {
+  background-color: #091e4214;
+}
+.btn {
+  padding: 6px 12px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.add-form {
+  width: 100%;
+  min-height: 32px;
+  padding: 6px 12px;
+}
+.success {
+  background: #0079bf;
+  color: #fff;
+}
+.success:hover {
+  background: #026aa7;
+}
+.delete {
+  background: transparent;
+}
+.delete:hover {
+  background: #091e4214;
+}
+.red {
+  color: red;
+}
+.form-add {
+  display: none;
+  opacity: 0;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+.form-add.is-show {
+  opacity: 1;
+  display: block;
+}
+.add {
+  transition: all 0.3s ease;
+}
+.add.is-hide {
+  opacity: 0;
+  display: none;
+}

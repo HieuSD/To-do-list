@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To DO LIST</title>
+    <!-- Font Awsome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Font Family link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./styless.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="left">
+          <input type="checkbox" class="checkAll" />
+          <span>Check All</span>
+        </div>
+        <button class="btn clear">Delete All</button>
+      </div>
+      <div class="body">
+        <span class="progress-num">0%</span>
+        <div class="progress">
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="todoList">
+      </div>
+      <div class="form">
+        <button class="add btn">Add Task</button>
+        <div class="form-add">
+          <textarea class="add-form" placeholder="Add Task" autofocus></textarea>
+          <button class="task-success success btn">Add</button>
+          <button class="task-delete delete btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS link -->
+    <script src="./main.js"></script>
+  </body>
+</html>
